@@ -3,7 +3,7 @@ package car.constructor;
 public class Car {
     private  injection injection;
 
-    public Car(injection injection) {
+    public void setInjection(injection injection) {
         this.injection = injection;
     }
 

@@ -4,13 +4,12 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="CarInjection" class="car.constructor.injection">
+    <bean id="injection" class="car.constructor.injection">
         <property name="make" value="Car"/>
         <property name="model" value="Ferrari"/>
     </bean>
 
-    <bean id="Car" class="car.constructor.Car">
-        <constructor-arg ref="CarInjection"/>
-    </bean>
+    <bean id="Car" class="car.constructor.Car" autowire="byName"/>
+    <!-- autowire injection-->
 
 </beans>
